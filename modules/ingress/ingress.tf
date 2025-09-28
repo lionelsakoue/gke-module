@@ -4,8 +4,4 @@ resource "helm_release" "istio_ingress" {
   chart      = "gateway"
   version    = var.istio_version
   namespace  = var.namespace
-
-  values = [
-    file("${path.module}/values.yaml")
-  ]
 }
